@@ -12,15 +12,17 @@ body{}
     display: inline-block;
     width: 10px; height: 10px;
     background: #f60;
+    line-height: 0;
     border-radius: 50%;
     border: 2px solid #fff;
+    text-indent: -9999px;
 }
 
 #container {
     max-width: 640px; min-width: 270px;
     height: 2000px;
     margin: 0 auto;
-    background-image: linear-gradient(to bottom, #06f, #fc1 25%,#6ee 50%, #e00);
+    background-image: linear-gradient(to bottom, #fff, #fc1 50%,#6ee 100%);
 }
 header {
     position: fixed;
@@ -28,6 +30,7 @@ header {
     max-width: 640px;
     min-width: 270px;
     margin: 0 auto;
+    background: #fff;
 }
 h1 {
     height: 46px;
@@ -55,10 +58,35 @@ h1 a span {
 .top_left {
     left: 12px;
 }
+.top_left > button {
+    padding: 5px;
+}
+.top_left .ico_dot {
+    position: absolute;
+    top: 5;
+    right: 3px;
+}
 .top_right {
     right: 12px;
 }
-nav {}
+.top_right > button {
+    padding: 5px;
+}
+.top_right .ico_search,
+.top_right .ico_global {
+    width: 24px;
+    height: 24px;
+}
+.top_right .ico_search {
+    background-position: -40px -20px;
+}
+.top_right .ico_global {
+    background-position: -440px -60px;
+}
+
+nav {
+    border-bottom: 1px solid #ccc;
+}
 .list_tab {
     display: flex;
 }
@@ -70,3 +98,127 @@ nav {}
     display: block;
     line-height: 43px;
 }
+.list_tab li a > span {
+    position: relative;
+}
+nav .ico_dot {
+    position: absolute;
+    top: 0px;
+    right: -10px;
+}
+.list_tab li a.on{
+    font-weight: bold;
+}
+.list_tab li a.on::after {
+    display: block;
+    content: "";
+    height: 4px;
+    background: #000;
+    position: relative;
+    bottom: -1px;
+}
+
+/* main */
+main {
+    padding-top: 95px;
+}
+
+article {}
+article .box {
+    padding: 20px;
+}
+.article_header {
+    padding-bottom: 15px;
+}
+.article_header .profile {
+    float: left;
+    display: inline-block;
+    width: 40px; height: 40px;
+    background: url(../img/character/character_20220531165245_96.png) no-repeat 0 0 / 40px 40px;
+    text-indent: -9999px;
+    border-radius: 15px;
+}
+.article_header .info {
+    padding-left: 46px;
+}
+.article_header .info strong {}
+.article_header .info .txt_time {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    line-height: 15px;
+}
+
+.article_con {}
+.article_con img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* GNB */
+#gnb {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: 304px;
+    background: #fff;
+    border: 2px solid red;
+}
+#gnb .inner {}
+
+.inner .info_user {
+    padding: 35px 20px 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.info_login {
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+.info_inquire {
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+.info_user .ico_arrow_right {
+    display: inline-block;
+    width: 16px; height: 16px;
+    background-position: -320px 0;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+ul.list_menu {
+    padding: 20px 0;
+}
+ul.list_menu > li{}
+ul.list_menu a.btn_menu {
+    display: block;
+    line-height: 48px;
+    padding: 0 24px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.line {
+    border-bottom: 1px solid #777;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+}
+.list_menu .ico_dot {
+    position: relative;
+    bottom: 12px;
+}
+.list_menu .ico_arrow {
+    float: right;
+    display: inline-block;
+    width: 16px; height: 16px;
+    background-position: -360px 0;
+    margin-top: 15px;
+}
+.list_menu .ico_arrow.on {
+    background-position: -340px 0;
+}
+.banner {}
+
+.login {}

@@ -21,5 +21,7 @@ img{
     vertical-align: middle;
 }
 button {
-    
+    border: 0;
+    background: none;
+    cursor: pointer;
 }
