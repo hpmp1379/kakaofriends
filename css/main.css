@@ -12,10 +12,17 @@ body{}
     display: inline-block;
     width: 10px; height: 10px;
     background: #f60;
+    font-size: 1px;
+    color: transparent;
     line-height: 0;
     border-radius: 50%;
     border: 2px solid #fff;
     text-indent: -9999px;
+}
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
 }
 
 #container {
@@ -47,7 +54,7 @@ h1 a {
 h1 a span {
     display: none;
 }
-.ico_gnb_menu {
+.top_left .ico_gnb_menu {
     width: 24px; height: 24px;
     background-position: -520px -60px;
 }
@@ -63,7 +70,7 @@ h1 a span {
 }
 .top_left .ico_dot {
     position: absolute;
-    top: 5;
+    top: 5px;
     right: 3px;
 }
 .top_right {
@@ -134,7 +141,7 @@ article .box {
     float: left;
     display: inline-block;
     width: 40px; height: 40px;
-    background: url(../img/character/character_20220531165245_96.png) no-repeat 0 0 / 40px 40px;
+    background: url(../img/character/char1_2.png) no-repeat 0 0 / 40px 40px;
     text-indent: -9999px;
     border-radius: 15px;
 }
@@ -156,17 +163,35 @@ article .box {
 }
 
 /* GNB */
+.dark {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 100;
+    display: none;
+}
+
 #gnb {
     position: fixed;
     top: 0; left: 0; bottom: 0;
     width: 304px;
     background: #fff;
-    border: 2px solid red;
+    overflow: hidden;
+    z-index: 150;
 }
-#gnb .inner {}
+#gnb .inner {
+    width: 304px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    box-sizing: content-box;
+}
 
 .inner .info_user {
-    padding: 35px 20px 24px 24px;
+    padding: 35px 0px 24px 24px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -194,16 +219,20 @@ ul.list_menu {
 ul.list_menu > li{}
 ul.list_menu a.btn_menu {
     display: block;
+    width: 100%;
     line-height: 48px;
-    padding: 0 24px;
+    padding: 0 10px 0 24px;
     font-size: 15px;
     font-weight: bold;
 }
 
-.line {
-    border-bottom: 1px solid #777;
+.line::after{
+    display: block;
+    content: "";
+    height: 16px;
+    width: 304px;
     margin-bottom: 16px;
-    padding-bottom: 16px;
+    border-bottom: 1px solid #777;
 }
 .list_menu .ico_dot {
     position: relative;
@@ -220,5 +249,169 @@ ul.list_menu a.btn_menu {
     background-position: -340px 0;
 }
 .banner {}
-
 .login {}
+.character_wrap {
+    display: none;
+}
+.list_character {
+    padding: 16px 0  16px 14px;
+    font-size: 0; /*자식요소 inline-block 사용시 여백을 막아주는 방법*/
+}
+.list_character li {
+    display: inline-block;
+    width: 25%;
+    padding-bottom: 20px;
+}
+.list_character li a {
+    display: block;
+    padding: 0 10px;
+    color: #555;
+}
+.img_character {
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+    background: no-repeat 50% 50% / cover;
+    border-radius: 50%;
+}
+.txt_character {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 8px;
+}
+.character01 .img_character {
+    background-image: url('../img/character/char1_1.png');
+}
+.character02 .img_character {
+    background-image: url('../img/character/char2_1.png');
+}
+.character03 .img_character {
+    background-image: url('../img/character/char3_1.png');
+}
+.character04 .img_character {
+    background-image: url('../img/character/char4_1.png');
+}
+.character05 .img_character {
+    background-image: url('../img/character/char5_1.png');
+}
+.character06 .img_character {
+    background-image: url('../img/character/char6_1.png');
+}
+.character07 .img_character {
+    background-image: url('../img/character/charzone1.jpg');
+}
+/* hover */
+.character01:hover .img_character {
+    background-image: url('../img/character/char1_2.png');
+}
+.character02:hover .img_character {
+    background-image: url('../img/character/char2_2.png');
+}
+.character03:hover .img_character {
+    background-image: url('../img/character/char3_2.png');
+}
+.character04:hover .img_character {
+    background-image: url('../img/character/char4_2.png');
+}
+.character05:hover .img_character {
+    background-image: url('../img/character/char5_2.png');
+}
+.character06:hover .img_character {
+    background-image: url('../img/character/char6_2.png');
+}
+.character07:hover .img_character {
+    background-image: url('../img/character/charzone2.jpg');
+}
+
+.category_wrap {
+    display: none;
+}
+.list_category {
+    padding: 8px 10px 8px 24px;
+    font-size: 0;
+}
+.list_category li {
+    display: inline-block;
+    width: 50%;
+}
+.list_category li a {
+    display: block;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+.banner a{
+    display: block;
+    padding: 0 0px 0 14px;
+}
+.banner img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.login {
+    margin-bottom: 30px;
+}
+.login a {
+    display: block;
+    text-align: center;
+    padding: 25px;
+    color: #555;
+    font-size: 13px;
+}
+.login .ico_gnb_lock {
+    display: inline-block;
+    width: 24px; height: 24px;
+    background-position: -560px -20px;
+    vertical-align: top;
+    margin-top: -2px;
+}
+.login_popup {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, 50%);
+    width: 310px;
+    text-align: center;
+    padding: 45px;
+    border-radius: 16px;
+    background: #fff;
+    z-index: 110;
+    display: none;
+}
+.login_popup img {
+    width: 120px;
+}
+.login_popup strong {
+    display: block;
+    margin-top: 10px;
+}
+.login_popup p {
+    font-size: 14px;
+}
+.login_popup .btn_kakao {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    background: #fe0;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.login_popup .ico_kakao {
+    display: inline-block;
+    width: 24px; height: 24px;
+    background-position: -480px -20px;
+    vertical-align: top;
+    margin-top: -2px;
+}
+.btn_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+}
+.btn_close .ico_close {
+    width: 24px; height: 24px;
+    background-position: 0 -20px;
+}

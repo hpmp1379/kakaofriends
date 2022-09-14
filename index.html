@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
 </head>
 <body>
     <div id="container">
         <header>
-            <h1><a href="#"><span>카카오 프렌즈</span></a></h1>
+            <h1><a href="index.html"><span>카카오 프렌즈</span></a></h1>
             <div class="top_left">
                 <button class="gnb">
                     <span class="ico_friends ico_gnb_menu">메뉴</span>
@@ -32,7 +31,7 @@
             <nav>
                 <ul class="list_tab">
                     <li><a href="#"><span>홈</span></a></li>
-                    <li><a href="#" class="on">베스트<span class="ico_dot">new</span></a></li>
+                    <li><a href="#" class="on"><span>베스트<span class="ico_dot">new</span></span></a></li>
                     <li><a href="#"><span>콘텐츠<span class="ico_dot">new</span></span></a></li>
                     <li><a href="#"><span>마이</span></a></li>
                 </ul>
@@ -56,6 +55,8 @@
         </main>
     </div>
 
+    <div class="dark"></div>
+
     <div id="gnb">
         <div class="inner">
             <div class="info_user">
@@ -71,15 +72,74 @@
                 <li><a href="#" class="btn_menu">장바구니 내역</a></li>
                 <li class="line"><a href="#" class="btn_menu">주문·배송 내역</a></li>
                 <li>
-                    <a href="#" class="btn_menu">캐릭터
-                        <span class="ico_friends ico_arrow on">펼치기</span>
-                    </a>
+                    <button href="#" class="btn_menu btn_character">캐릭터
+                        <span class="ico_friends ico_arrow">펼치기</span>
+                        <div class="character_wrap">
+                            <ul class="list_character">
+                                <li class="character01">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">라이언</span>
+                                    </a>
+                                </li>
+                                <li class="character02">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">어피치</span>
+                                    </a>
+                                </li>
+                                <li class="character03">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">토끼</span>
+                                    </a>
+                                </li>
+                                <li class="character04">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">멍멍이</span>
+                                    </a>
+                                </li>
+                                <li class="character05">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">고양이</span>
+                                    </a>
+                                </li>
+                                <li class="character06">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">오리</span>
+                                    </a>
+                                </li>
+                                <li class="character07">
+                                    <a href="#">
+                                        <span class="img_character"></span>
+                                        <span class="txt_character">캐릭터존</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </button>
                 </li>
                 <li class="line">
-                    <a href="#" class="btn_menu">카테고리
-                        <span class="ico_friends ico_arrow on">펼치기</span>
-                    </a>
-                    
+                    <button href="#" class="btn_menu btn_category">카테고리
+                        <span class="ico_friends ico_arrow">펼치기</span>
+                    </button>
+                    <div class="category_wrap">
+                        <ul class="list_category">
+                            <li><a href="#">전체</a></li>
+                            <li><a href="#">토이</a></li>
+                            <li><a href="#">리빙</a></li>
+                            <li><a href="#">문구</a></li>
+                            <li><a href="#">잡화</a></li>
+                            <li><a href="#">의류</a></li>
+                            <li><a href="#">디지털</a></li>
+                            <li><a href="#">여행/레져</a></li>
+                            <li><a href="#">식품</a></li>
+                            <li><a href="#">테마 기획전</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="#" class="btn_menu">프렌즈 별다꾸
@@ -96,13 +156,29 @@
                 <li class="line"><a href="#" class="btn_menu">기프트카드 조회·환불</a></li>
                 <li><a href="#" class="btn_menu">카카오프렌즈샵 안내</a></li>
             </ul>
-            <div class="banner">
-
+            <div class="banner line">
+                <a href="#">
+                    <img src="img/bn_addtalk.png" alt="카톡 추가하고 프렌즈 소식을 받아보세요">
+                </a>
             </div>
             <div class="login">
-
+                <a href="#">
+                    <span class="ico_friends ico_gnb_lock">자물쇠</span>로그인
+                </a>
             </div>
         </div>
+    </div>
+
+    <div class="login_popup">
+        <img src="img/img_apeach.png" alt="">
+        <strong>앗! 로그인</strong>
+        <p>앗! 깜빡, 로그인하고 이용하기</p>
+        <button class="btn_kakao">
+            <span class="ico_friends ico_kakao"></span>카카오톡 로그인하기
+        </button>
+        <button class="btn_close">
+            <span class="ico_friends ico_close">닫기</span>
+        </button>
     </div>
 </body>
 </html>
