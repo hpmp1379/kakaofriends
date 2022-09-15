@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kakao Friends🍑</title>
-    <link rel="icon" href="img/character/character_20220531165245_96.png">
+    <link rel="icon" href="img/character/char5_1.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <div id="container">
         <header>
             <h1><a href="index.html"><span>카카오 프렌즈</span></a></h1>
             <div class="top_left">
-                <button class="gnb">
+                <button class="gnb_btn">
                     <span class="ico_friends ico_gnb_menu">메뉴</span>
                     <span class="ico_dot">new</span>
                 </button>
@@ -60,7 +61,7 @@
     <div id="gnb">
         <div class="inner">
             <div class="info_user">
-                <a href="#" class="info_login">
+                <a href="#" class="info_login login_require">
                     <u>로그인</u>이 필요해요
                 </a>
                 <a href="#" class="info_inquire">
@@ -69,64 +70,64 @@
                 </a>
             </div>
             <ul class="list_menu">
-                <li><a href="#" class="btn_menu">장바구니 내역</a></li>
-                <li class="line"><a href="#" class="btn_menu">주문·배송 내역</a></li>
+                <li><a href="#" class="btn_menu login_require">장바구니 내역</a></li>
+                <li class="line"><a href="#" class="btn_menu login_require">주문·배송 내역</a></li>
                 <li>
-                    <button href="#" class="btn_menu btn_character">캐릭터
+                    <button href="#" class="btn_menu btn_sub">캐릭터
                         <span class="ico_friends ico_arrow">펼치기</span>
-                        <div class="character_wrap">
-                            <ul class="list_character">
-                                <li class="character01">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">라이언</span>
-                                    </a>
-                                </li>
-                                <li class="character02">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">어피치</span>
-                                    </a>
-                                </li>
-                                <li class="character03">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">토끼</span>
-                                    </a>
-                                </li>
-                                <li class="character04">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">멍멍이</span>
-                                    </a>
-                                </li>
-                                <li class="character05">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">고양이</span>
-                                    </a>
-                                </li>
-                                <li class="character06">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">오리</span>
-                                    </a>
-                                </li>
-                                <li class="character07">
-                                    <a href="#">
-                                        <span class="img_character"></span>
-                                        <span class="txt_character">캐릭터존</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </button>
+                    <div class="list_sub_wrap">
+                        <ul class="list_character">
+                            <li class="character01">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">라이언</span>
+                                </a>
+                            </li>
+                            <li class="character02">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">어피치</span>
+                                </a>
+                            </li>
+                            <li class="character03">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">토끼</span>
+                                </a>
+                            </li>
+                            <li class="character04">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">멍멍이</span>
+                                </a>
+                            </li>
+                            <li class="character05">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">고양이</span>
+                                </a>
+                            </li>
+                            <li class="character06">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">오리</span>
+                                </a>
+                            </li>
+                            <li class="character07">
+                                <a href="#">
+                                    <span class="img_character"></span>
+                                    <span class="txt_character">캐릭터존</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="line">
-                    <button href="#" class="btn_menu btn_category">카테고리
+                    <button href="#" class="btn_menu btn_sub">카테고리
                         <span class="ico_friends ico_arrow">펼치기</span>
                     </button>
-                    <div class="category_wrap">
+                    <div class="list_sub_wrap">
                         <ul class="list_category">
                             <li><a href="#">전체</a></li>
                             <li><a href="#">토이</a></li>

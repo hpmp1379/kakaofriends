@@ -14,6 +14,7 @@ li{
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
 img{
     /* 옛날 browser는 보더가 생긴다 */

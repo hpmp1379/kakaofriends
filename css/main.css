@@ -176,7 +176,7 @@ article .box {
 
 #gnb {
     position: fixed;
-    top: 0; left: 0; bottom: 0;
+    top: 0; left: -304px; bottom: 0;
     width: 304px;
     background: #fff;
     overflow: hidden;
@@ -217,13 +217,14 @@ ul.list_menu {
     padding: 20px 0;
 }
 ul.list_menu > li{}
-ul.list_menu a.btn_menu {
+ul.list_menu .btn_menu {
     display: block;
     width: 100%;
     line-height: 48px;
     padding: 0 10px 0 24px;
     font-size: 15px;
     font-weight: bold;
+    text-align: left;
 }
 
 .line::after{
@@ -250,7 +251,7 @@ ul.list_menu a.btn_menu {
 }
 .banner {}
 .login {}
-.character_wrap {
+.list_sub_wrap {
     display: none;
 }
 .list_character {
@@ -324,9 +325,6 @@ ul.list_menu a.btn_menu {
     background-image: url('../img/character/charzone2.jpg');
 }
 
-.category_wrap {
-    display: none;
-}
 .list_category {
     padding: 8px 10px 8px 24px;
     font-size: 0;
@@ -370,7 +368,7 @@ ul.list_menu a.btn_menu {
 .login_popup {
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
     width: 310px;
     text-align: center;
     padding: 45px;
